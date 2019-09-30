@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="Week 4-1 Deliverable.css">
+</head>
+ <body>
+
+<h1>Customer Information</h1>
+<hr>
+
+<p>Whats is your first name? [_________]<br> What is your last name?[___________]<br> What is your Email?[_________________]</p>
+<hr>
+
+<button>Submit</button>
+<hr>
+
+<script>
+function validateForm() {
+var x = document.Forms["CustomerInformation"]
+if (x=="") {
+	alert("This box cannot be empty");
+    return false;
+    }
+}
+var y = document.Forms["CustomerInformation"]["lname"].value;
+if (y=="")
+	alert("This box cannot be empty")
+    return false;
+    }
+}
+var z = document.Forms["CustomerInformation"]["eaddres"].value;
+if (z=="")
+	alert("This box cannot be empty")
+    return false;
+    }
+}
+</script>
+
+<form name ="CustomerInformation" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname"> <br>
+LastName: <input type="text"name="lname"> <br>
+Email: <input type="text" name ="Email"> <br>
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
